@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vistara Airlines | Flight Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1f2937;
+    }
+
+    .app {
+      width: 900px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #4f46e5;
+    }
+
+    header span {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .search-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) auto;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    label {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      font-size: 0.9rem;
+    }
+
+    button {
+      padding: 14px 22px;
+      border: none;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      align-self: flex-end;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4);
+    }
+
+    .flights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .flight-card {
+      background: #f9fafb;
+      border-radius: 18px;
+      padding: 20px;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .flight-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .flight-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .flight-top h3 {
+      color: #111827;
+      font-size: 1rem;
+    }
+
+    .price {
+      color: #16a34a;
+      font-weight: 600;
+    }
+
+    .flight-info {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+
+    .book-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+    }
+
+    .book-btn:hover {
+      box-shadow: 0 10px 20px rgba(22, 163, 74, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app">
+    <header>
+      <h1>Vistara Airlines</h1>
+      <span>Where Legacy Continues</span>
+    </header>
+
+    <div class="search-box">
+      <div>
+        <label>From</label>
+        <select>
+          <option>Delhi</option>
+          <option>Mumbai</option>
+          <option>Bengaluru</option>
+          <option>Chennai</option>
+        </select>
+      </div>
+
+      <div>
+        <label>To</label>
+        <select>
+          <option>Bengaluru</option>
+          <option>Mumbai</option>
+          <option>Delhi</option>
+          <option>Hyderabad</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Date</label>
+        <select>
+          <option>15 Dec 2024</option>
+        </select>
+      </div>
+
+      <button>Search Flights</button>
+    </div>
+
+    <section class="flights">
+      <div class="flight-card">
+        <div class="flight-top">
+          <h3>Vistara Airlines</h3>
+          <span class="price">₹3,500</span>
+        </div>
+        <div class="flight-info">
+          Delhi → Bengaluru<br>
+          Flight No: VTI-101 · Airbus A320 · 09:00 AM
+        </div>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-top">
+          <h3>IndiGo</h3>
+          <span class="price">₹3,300</span>
+        </div>
+        <div class="flight-info">
+          Delhi → Bengaluru<br>
+          Flight No: IGO-211 · Boeing 737 · 12:00 PM
+        </div>
+        <button class="book-btn">Book Now</button>
+      </div>
+    </section>
+
+    <footer>
+      © 2024 Vistara Airlines · Demo Booking Interface
+    </footer>
+  </div>
+
+</body>
+</html>
